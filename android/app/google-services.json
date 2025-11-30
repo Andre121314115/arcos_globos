@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "425954472312",
+    "project_id": "arcosglobos-app-498fa",
+    "storage_bucket": "arcosglobos-app-498fa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:425954472312:android:748d9bc5600b3d20a3988d",
+        "android_client_info": {
+          "package_name": "com.example.arcos_globos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCufyc7VxMY19EKmtVioLXtz8wDmGswc3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
