@@ -31,10 +31,10 @@ class AppConstants {
   
   // Usuario principal con acceso completo
   static const Map<String, String> mainUser = {
-    'email': 'antony@gmail.com',
+    'email': 'andre@gmail.com',
     'password': '123456',
-    'name': 'Luis Antony',
-    'phone': '+51 912112268',
+    'name': 'Andre De La Torre',
+    'phone': '+51927535786',
   };
   
   // Usuarios de prueba adicionales

@@ -41,7 +41,7 @@ class UserModel {
 
   // Verificar si es el usuario principal con acceso completo
   bool get hasFullAccess {
-    return email == 'antony@gmail.com';
+    return email == 'andre@gmail.com';
   }
 
   // Obtener todos los roles disponibles para este usuario

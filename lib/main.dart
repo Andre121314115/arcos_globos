@@ -7,7 +7,7 @@ import 'providers/auth_provider.dart';
 import 'screens/auth/login_screen.dart';
 import 'screens/client/client_home_screen.dart';
 import 'screens/employee/employee_home_screen.dart';
-import 'screens/admin/master_dashboard_screen.dart';
+import 'screens/admin/admin_dashboard.dart'; // ✅ NUEVO IMPORT
 import 'models/user_model.dart';
 import 'utils/theme.dart';
 
@@ -80,18 +80,18 @@ class AuthWrapper extends StatelessWidget {
           return const LoginScreen();
         }
 
-        // Usuario principal con acceso completo
-        if (user.hasFullAccess) {
-          return const MasterDashboardScreen();
+        // ✅ NUEVA LÓGICA DE NAVEGACIÓN SEGURA POR ROLES
+        switch (user.role) {
+          case UserRole.admin:
+            return const AdminDashboardScreen(); // ✅ REEMPLAZA MasterDashboard
+          case UserRole.decorator:
+          case UserRole.logistics:
+          case UserRole.manager:
+            return const EmployeeHomeScreen();
+          case UserRole.client:
+          default:
+            return const ClientHomeScreen();
         }
-
-        // Cliente va a pantalla de cliente
-        if (user.role == UserRole.client) {
-          return const ClientHomeScreen();
-        }
-
-        // Empleados van a pantalla de empleados
-        return const EmployeeHomeScreen();
       },
     );
   }
